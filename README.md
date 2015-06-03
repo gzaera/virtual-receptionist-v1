@@ -7,9 +7,11 @@ Once the visitor is registered an Instant Message is sent to the corresponding c
 For more information check the Circuit Developer Community: https://www.yourcircuit.com/web/developers
 
 Getting Started:
+-------------------------
 npm install
 
 How to start the nodejs web server:
+--------------------------------------
 npm start
 
 or
