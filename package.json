@@ -1,0 +1,40 @@
+{
+  "name": "virtual.receptionist",
+  "version": "0.0.1",
+  "description": "Web application that collects visitors information and sends a notification via Circuit to the corresponding contact person",
+  "private": true,
+  "dependencies": {
+    "body-parser": "~1.4.3",
+    "bower": "~1.3.5",
+    "express": "~4.12.2",
+    "debug": "~2.1.1",
+    "method-override": "~2.0.2",
+    "morgan": "~1.1.1",
+    "underscore": "~1.6.0",
+    "validator": "~1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gzaera/circuit-receptionist-v1"
+  },
+  "scripts": {
+    "start": "grunt dev",
+    "test": "grunt test",
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-env": "~0.4.1",
+    "grunt-mocha-test": "~0.11.0",
+    "grunt-nodemon": "~0.2.1",
+    "mocha": "~1.20.1",
+    "nodemon": "~1.2.0",
+    "requirejs": "~2.1.14"
+  },
+  "author": "Graciela Zaera",
+  "engines": {
+    "node": "0.12.x"
+  }
+}

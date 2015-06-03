@@ -1,0 +1,31 @@
+Example web application using
+================================
+
+Express for building the nodejs web sever: http://expressjs.com/
+
+Bower to manage packages versions: http://bower.io/
+
+Bootstrap for JS client UI: http://getbootstrap.com/
+
+Angular for JS client UI: https://angularjs.org/
+
+Grunt as JS Task runner: http://gruntjs.com/
+
+
+Getting Started:
+================
+npm install
+
+
+
+How to start server:
+====================
+
+npm start 
+
+or 
+
+node server.js
+
+
+
