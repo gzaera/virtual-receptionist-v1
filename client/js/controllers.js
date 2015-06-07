@@ -30,7 +30,7 @@ angular.module('circuit.virtual.receptionist')
     var _isInitialized = false;
 
     $scope.conversations = [];
-    $scope.items = [];
+   // $scope.items = [];
 
 
 
@@ -44,27 +44,15 @@ angular.module('circuit.virtual.receptionist')
     });
 
     $scope.login = function () {
-
-      Circuit.logon($scope.email, $scope.password, $scope.domain).then(function (user) {
-          $scope.localUser = user;
-          setupEventListeners(user);
-        }).then(function () {
-          return $scope.localUser.getConversations();
-        }).then(function(conversations) {
-          $scope.conversations = conversations;
-          return $scope.conversations[0];
-        }).then(function(conversation) {
-          _isInitialized = true;
-          conversation.markItemsAsRead();
-          $scope.selectedConv = conversation;
-          return $scope.selectedConv.getItems();
-        }).then(function(items) {
-          console.log('Loaded item count: ', items.length);
-          $scope.$apply();
-        }).catch(function(err) {
-          if (err) { return alert('Error: ' + err.message); }
+        Circuit.logon($scope.email, $scope.password, $scope.domain).then(function (user) {
+              $scope.localUser = user;
+              setupEventListeners(user);
+            }).then(function () {
+              $scope.$apply();
+            }).catch(function(err) {
+              if (err) { return alert('Error: ' + err.message); }
         });
-      }
+     }
 
     $scope.logout = function () {
       $scope.localUser && $scope.localUser.logout();
@@ -234,14 +222,5 @@ angular.module('circuit.virtual.receptionist')
     $scope.selectedUsers.remove(user);
   }
 
-  $scope.$watch('selectedConv', function (newValue, oldValue) {
-    if (newValue && oldValue && newValue.convId === oldValue.convId) {
-      return;
-    }
-    if (newValue) {
-      getItems(newValue.convId);
-      $scope.selectedConv.markItemsAsRead();          
-    }
-  });
 
 }]);

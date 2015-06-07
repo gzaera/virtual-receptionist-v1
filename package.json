@@ -1,6 +1,6 @@
 {
   "name": "virtual.receptionist",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Web application that collects visitors information and sends a notification via Circuit to the corresponding contact person",
   "private": true,
   "dependencies": {
